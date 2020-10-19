@@ -9,8 +9,8 @@ public class Task2 {
         Random random = new Random();
         int evenCount = 0;
         int oddCount = 0;
-
         int[] array = new int[5];
+        
         for (int i = 0; i < 5; i++) {
             array[i] = random.nextInt(100);
             if (array[i] % 2 == 0) evenCount++;
