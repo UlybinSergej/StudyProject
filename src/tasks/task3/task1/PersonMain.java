@@ -11,8 +11,8 @@ public class PersonMain {
         Random random = new Random();
 
         for (int i = 0; i < 50; i++) {
-            int temp = random.nextInt(5);
-            persons[i] = new Person(firstNameArray[0][temp], lastNameArray[random.nextInt(6)], firstNameArray[1][temp]);
+            int temp = random.nextInt(firstNameArray.length);
+            persons[i] = new Person(firstNameArray[0][temp], lastNameArray[random.nextInt(lastNameArray.length)], firstNameArray[1][temp]);
             System.out.println("Человек №" + (i + 1) + " " + persons[i].toString());
         }
     }
