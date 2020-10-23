@@ -13,6 +13,5 @@ public class RandomMain {
         System.out.println(SequentialRandom.getRandomValue());
         new SequentialRandom();
         System.out.println(SequentialRandom.getRandomValue());
-
     }
 }
