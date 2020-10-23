@@ -2,6 +2,7 @@ package task5.task1;
 
 public class Circle extends Figure {
     private double radius;
+    private final static int MAX_SIZE = 10;
 
     public Circle(int x, int y, double radius) throws RadiusException {
         super(x, y);
@@ -20,8 +21,8 @@ public class Circle extends Figure {
     }
 
     private void validateRadius(double radius) throws RadiusException {
-        if (radius > 10 || radius < 0) {
-            throw new RadiusException("Радиус вне допустимых значений(0 <= radius <= 10)");
+        if (radius > MAX_SIZE || radius < 0) {
+            throw new RadiusException("Радиус вне допустимых значений(0 <= radius <= " + MAX_SIZE + ")");
         }
     }
 }
