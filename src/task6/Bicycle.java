@@ -32,6 +32,10 @@ public class Bicycle {
         }
     }
 
+    public static int getBicycleModelSize() {
+        return BicyclesModel.values().length;
+    }
+
     @Override
     public String toString() {
         return "Bicycle{" + "modelName=" + modelName + ", maxSpeed=" + maxSpeed + '}';
