@@ -4,13 +4,15 @@ import java.util.Arrays;
 import java.util.Random;
 
 public class Task2 {
+    private final static int ARRAY_SIZE = 5;
+
     public static void main(String[] args) {
         Random random = new Random();
         int evenCount = 0;
         int oddCount = 0;
-        int[] array = new int[5];
+        int[] array = new int[ARRAY_SIZE];
 
-        for (int i = 0; i < 5; i++) {
+        for (int i = 0; i < array.length; i++) {
             array[i] = random.nextInt(100);
             if (array[i] % 2 == 0) evenCount++;
             else oddCount++;
@@ -21,7 +23,7 @@ public class Task2 {
         int[] evenArray = new int[evenCount];
         int[] oddArray = new int[oddCount];
 
-        for (int i = 0; i < 5; i++) {
+        for (int i = 0; i < array.length; i++) {
             if (array[i] % 2 == 0) {
                 evenArray[evenArray.length - evenCount] = array[i];
                 evenCount--;
