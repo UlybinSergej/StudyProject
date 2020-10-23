@@ -13,10 +13,10 @@ public class Task1 {
             array[i] = random.nextInt();
             sum += array[i];
             minNum = (minNum > array[i]) ? array[i] : minNum;
-            System.out.println(array[i] + " ");
+            System.out.print(array[i] + " ");
         }
 
-        System.out.println(sum);
-        System.out.println(minNum);
+        System.out.println("\n" + "Сумма всех элементов - " + sum);
+        System.out.println("Минимальное значение - " + minNum);
     }
 }

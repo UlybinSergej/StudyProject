@@ -4,20 +4,22 @@ import java.util.Arrays;
 import java.util.Random;
 
 public class Task3 {
+    private static final int ARRAYS_SIZE = 7;
+    private static int positiveCount = 7;
+    private static int negativeCount = 7;
+
     public static void main(String[] args) {
         Random random = new Random();
-        int[] positiveArray = new int[7];
-        int[] negativeArray = new int[7];
-        int[] array = new int[7];
-        int positiveCount = 7;
-        int negativeCount = 7;
+        int[] positiveArray = new int[ARRAYS_SIZE];
+        int[] negativeArray = new int[ARRAYS_SIZE];
+        int[] array = new int[ARRAYS_SIZE];
 
-        while (positiveArray[6] == 0 || negativeArray[6] == 0) {
+        while (positiveArray[ARRAYS_SIZE - 1] == 0 || negativeArray[ARRAYS_SIZE - 1] == 0) {
             int temp = random.nextInt();
-            if (temp > 0 && positiveArray[6] == 0) {
+            if (temp > 0 && positiveArray[ARRAYS_SIZE - 1] == 0) {
                 positiveArray[positiveArray.length - positiveCount] = temp;
                 positiveCount--;
-            } else if (temp < 0 && negativeArray[6] == 0) {
+            } else if (temp < 0 && negativeArray[ARRAYS_SIZE - 1] == 0) {
                 negativeArray[negativeArray.length - negativeCount] = temp;
                 negativeCount--;
             }
