@@ -27,8 +27,6 @@ public class ArrayMain {
         for (int i = 0; i < nums.size(); i++) {
             System.out.println(nums.get(i));
         }
-
-        ArrayList list = new ArrayList();
     }
 
     public static MyArrayList<Bicycle> createBicycles(int count) throws MaxSpeedException {
