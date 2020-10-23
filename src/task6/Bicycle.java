@@ -34,15 +34,25 @@ public class Bicycle {
 
     @Override
     public String toString() {
-        return "Bicycle{" +
-                "modelName=" + modelName +
-                ", maxSpeed=" + maxSpeed +
-                '}';
+        return "Bicycle{" + "modelName=" + modelName + ", maxSpeed=" + maxSpeed + '}';
     }
 }
 
 class MaxSpeedException extends Exception {
     MaxSpeedException(String msg) {
         super(msg);
+    }
+}
+
+enum BicyclesModel {
+    ROAD_BIKE(0),
+    MOUNTAIN_BIKE(1),
+    CITY_BIKE(2),
+    TRIAL_BIKE(3);
+
+    private int bikeNumber;
+
+    BicyclesModel(int bikeNumber) {
+        this.bikeNumber = bikeNumber;
     }
 }

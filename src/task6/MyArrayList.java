@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class MyArrayList<T> {
     private Object[] list;
-    private int length;
+    private static int length;
 
     public MyArrayList() {
         list = new Object[10];
