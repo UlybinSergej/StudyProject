@@ -27,3 +27,7 @@ public abstract class Figure {
         }
     }
 }
+
+enum Quadrant {
+    I, II, III, IV, ORIGIN_OF_COORDINATES, THE_COORDINATE_IS_ON_THE_X_AXIS, THE_COORDINATE_IS_ON_THE_Y_AXIS;
+}

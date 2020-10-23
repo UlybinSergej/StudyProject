@@ -24,6 +24,8 @@ public class Rectangle extends Figure {
     private void validateRectangle(int width, int height) throws RectangleSizeException {
         if (width > 20 || width < 0 || height > 20 || height < 0) {
             throw new RectangleSizeException("Ширина/Высота вне допустимых значений(0 <= side <= 20)");
+        } else if (width == height) {
+            throw new RectangleSizeException("Ширина и высота прямоугольника должны быть разные!");
         }
     }
 }

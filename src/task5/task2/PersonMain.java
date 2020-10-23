@@ -8,7 +8,7 @@ public class PersonMain {
         Random random = new Random();
 
         for (int i = 0; i < 10; i++) {
-            persons[i] = new Person(Names.values()[random.nextInt(10)], Season.values()[random.nextInt(4)]);
+            persons[i] = new Person(Person.Names.values()[random.nextInt(10)], Person.Season.values()[random.nextInt(4)]);
         }
 
         for (Person person : persons) {
