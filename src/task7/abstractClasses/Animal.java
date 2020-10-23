@@ -12,7 +12,7 @@ public abstract class Animal {
         this.name = name;
     }
 
-    abstract Meal getFavoriteMeal();
+    public abstract Meal getFavoriteMeal();
 
     @Override
     public boolean equals(Object o) {

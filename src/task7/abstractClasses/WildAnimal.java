@@ -7,7 +7,4 @@ public abstract class WildAnimal extends Animal {
     public WildAnimal(Name name) {
         super(name);
     }
-
-    @Override
-    public abstract Meal getFavoriteMeal();
 }

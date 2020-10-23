@@ -13,6 +13,10 @@ import java.util.Set;
 public class Zoo {
     private Set<PetAnimal> petAnimals = new HashSet<>();
     private Set<WildAnimal> wildAnimals = new HashSet<>();
+    private static final int MAX_SIZE_PET_ANIMAL_ARRAY = 5;
+    private static final int MIN_SIZE_PET_ANIMAL_ARRAY = 1;
+    private static final int MAX_SIZE_WILD_ANIMAL_ARRAY = 10;
+    private static final int MIN_SIZE_WILD_ANIMAL_ARRAY = 3;
 
     public Zoo() {
         fillCollectionWithPetAnimals(petAnimals);
@@ -22,7 +26,7 @@ public class Zoo {
     private void fillCollectionWithPetAnimals(Set<PetAnimal> petAnimals) {
         Random random = new Random();
         int choosePets = random.nextInt(2);
-        int emptySizeSet = random.nextInt(5) + 1;
+        int emptySizeSet = getRandom(MIN_SIZE_PET_ANIMAL_ARRAY, MAX_SIZE_PET_ANIMAL_ARRAY);
         System.out.println("PetSet size - " + emptySizeSet);
         do {
             PetAnimal pet;
@@ -40,7 +44,7 @@ public class Zoo {
     private void fillCollectionWithWildAnimals(Set<WildAnimal> wildAnimals) {
         Random random = new Random();
         int chooseWildAnimal = random.nextInt(2);
-        int emptySizeSet = random.nextInt(8) + 3;
+        int emptySizeSet = getRandom(MIN_SIZE_WILD_ANIMAL_ARRAY, MAX_SIZE_WILD_ANIMAL_ARRAY);
         System.out.println("WildAnimalSet size - " + emptySizeSet);
         do {
             WildAnimal wildAnimal;
@@ -64,5 +68,10 @@ public class Zoo {
     public void printAllAnimals() {
         printAnimalsFromCollection(petAnimals);
         printAnimalsFromCollection(wildAnimals);
+    }
+
+    private int getRandom(int min, int max) {
+        Random random = new Random();
+        return min + random.nextInt(max - min);
     }
 }

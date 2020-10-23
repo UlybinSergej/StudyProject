@@ -5,7 +5,6 @@ import task7.enums.Name;
 import task7.abstractClasses.PetAnimal;
 
 public class Cat extends PetAnimal {
-
     public Cat(Name name) {
         super(name);
     }
