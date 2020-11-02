@@ -54,8 +54,4 @@ public class Task17 extends Config {
         String[] quantity = driver.findElement(PRODUCTS_AND_CATEGORIES).getAttribute("innerText").split(",");
         return Integer.parseInt(quantity[1].substring(11)) + Integer.parseInt(quantity[0].substring(12)) + 1;
     }
-
-//    public void waitToFindElement(WebElement element) {
-//        wait.until(ExpectedConditions.visibilityOf(element));
-//    }
 }

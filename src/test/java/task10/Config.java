@@ -44,7 +44,6 @@ public class Config {
     }
 }
 
-
 class MyListener extends AbstractWebDriverEventListener {
     @Override
     public void beforeFindBy(By by, WebElement element, WebDriver driver) {
