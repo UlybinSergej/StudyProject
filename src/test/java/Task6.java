@@ -5,29 +5,16 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
+import services.Application;
 
 
-public class Task6 {
-    private WebDriver fox;
-
-    @Before
-    public void start() {
-        FirefoxOptions options = new FirefoxOptions();
-        options.setBinary("C:\\Program Files\\Firefox Nightly\\firefox.exe");
-        fox = new FirefoxDriver(options);
-    }
+public class Task6 extends TestBase{
 
     @Test
     public void testEsrFox() {
-        fox.get("http://localhost/litecart/admin/");
-        fox.findElement(By.name("username")).sendKeys("admin");
-        fox.findElement(By.name("password")).sendKeys("admin");
-        fox.findElement(By.xpath("//*[@id=\"box-login\"]/form/div[2]/button")).click();
-    }
-
-    @After
-    public void end() {
-        fox.quit();
-        fox = null;
+        FirefoxOptions options = new FirefoxOptions();
+        options.setBinary("C:\\Program Files\\Firefox Nightly\\firefox.exe");
+        app = new Application(new FirefoxDriver(options));
+        app.login();
     }
 }
