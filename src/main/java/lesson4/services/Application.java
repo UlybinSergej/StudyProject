@@ -42,9 +42,6 @@ public class Application extends PageBase {
                 Assert.assertEquals(driver.findElements(By.xpath(mainPage.getStickers().replace("sectionName", mainPage.getSectionNames()[i])
                 .replace("articleCount", String.valueOf(j)))).size(), 1);
             }
-
         }
-
     }
-
 }
