@@ -5,36 +5,26 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
+import services.Application;
 
 
-public class Task4 {
-    private WebDriver driver;
+public class Task4 extends TestBase{
 
     @Test
     public void chromeTest() {
-        driver = new ChromeDriver();
-        driver.get("http://localhost/litecart/");
-        System.out.println(driver.getTitle() + "\ntesting Chrome");
+        app = new Application(new ChromeDriver());
+        app.login();
     }
 
     @Test
     public void foxTest() {
-        driver = new FirefoxDriver(new FirefoxOptions().setBinary("C:\\Program Files\\Firefox Developer Edition\\firefox.exe"));
-        driver.get("http://localhost/litecart/");
-        System.out.println(driver.getTitle() + "\ntesting FireFox");
+        app = new Application(new FirefoxDriver(new FirefoxOptions().setBinary("C:\\Program Files\\Firefox Developer Edition\\firefox.exe")));
+        app.login();
     }
 
     @Test
     public void edgeTest() {
-        driver = new EdgeDriver();
-        driver.get("http://localhost/litecart/");
-        System.out.println(driver.getTitle() + "\ntesting Edge");
+        app = new Application(new EdgeDriver());
+        app.login();
     }
-
-    @After
-    public void end() {
-        driver.quit();
-        driver = null;
-    }
-
 }
